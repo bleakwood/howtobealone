@@ -1,0 +1,7 @@
+<div ng-controller="FeelingsCtrl">
+	<h1> {{heading}} </h1>
+	<h2> <%= link_to "How do you feel now?", "#", class: "todays-emotion" %> </h2>
+	<li ng-repeat="f in feelings">
+     <h2>{{f.name}}</h2>
+   </li>
+</div>
