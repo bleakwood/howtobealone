@@ -1,7 +1,30 @@
-<div class='span5' ng-controller="FeelingsCtrl">
+<div class='span5' id="home_page" ng-controller="FeelingsCtrl">
 	<h1> {{heading}} </h1>
 	<h2> <%= link_to "How do you feel now?", "#", class: "todays-emotion" %> </h2>
 	<li ng-repeat="f in feelings">
      <span ng-click="selectFeeling(f)">{{f.name}}</span>
    </li>
+
+   <div id="emotion_button">
+
+       <p id="first_button">
+        <button type="button" class="btn btn-lg btn-default">Happy</button>
+        <button type="button" class="btn btn-lg btn-primary">Normal</button>
+        <button type="button" class="btn btn-lg btn-success">Angry</button>
+      </p>
+
+      <p id="second_button">
+        <button type="button" class="btn btn-lg btn-default">Excited</button>
+        <button type="button" class="btn btn-lg btn-primary">Tired</button>
+        <button type="button" class="btn btn-lg btn-success">Sad</button>
+      </p>
+
+      <p id="third_button">
+        <button type="button" class="btn btn-lg btn-default">Relaxed</button>
+        <button type="button" class="btn btn-lg btn-primary">Stressed</button>
+        <button type="button" class="btn btn-lg btn-success">Terrible</button>
+      </p>
+
+    </div>
 </div>
+

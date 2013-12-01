@@ -13,3 +13,42 @@
  */
 
 @import "twitter/bootstrap";
+.span5{
+	background-color: black;
+}
+#home_page{
+	background: url(/assets/homepage.jpg) no-repeat;
+	background-size:320px 568px;
+	height:568px;
+	width: 320px;
+
+}
+#emotion_button{
+	margin: 0 auto;
+	margin-top: 220px;
+	margin-left: 50px;
+}
+.btn-primary{
+	background-color:transparent;
+	z-index:-999;
+	font-size: 12px;
+}
+ .btn-default{
+	background-color:transparent;
+		font-size: 12px;
+
+}
+ .btn-success{
+	background-color:transparent;
+		font-size: 12px;
+
+}
+#second_button{
+	margin-top: 70px;
+}
+#third_button{
+	margin-top: 50px;
+}
+#first_button{
+	margin-top: 50px;
+}
