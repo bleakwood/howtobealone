@@ -30,7 +30,7 @@ htbaApp.controller('FeelingsCtrl', ['$scope', 'Feeling', function($scope, Feelin
 		{name: 'Sad'}
 	];
 	$scope.feeling = $scope.feelings[0];
-	$scope.selectedFeeling = function() {
-
+	$scope.selectFeeling = function(f) {
+		console.log(f);
 	};
 }]);

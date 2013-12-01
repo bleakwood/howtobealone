@@ -1,7 +1,7 @@
-<div ng-controller="FeelingsCtrl">
+<div class='span5' ng-controller="FeelingsCtrl">
 	<h1> {{heading}} </h1>
 	<h2> <%= link_to "How do you feel now?", "#", class: "todays-emotion" %> </h2>
 	<li ng-repeat="f in feelings">
-     <h2>{{f.name}}</h2>
+     <span ng-click="selectFeeling(f)">{{f.name}}</span>
    </li>
 </div>
