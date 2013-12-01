@@ -8,8 +8,8 @@
    <div id="emotion_button">
 
        <p id="first_button">
-        <button type="button" class="btn btn-lg btn-default">Happy</button>
-        <button type="button" class="btn btn-lg btn-primary" id="normal">Normal</button>
+        <%= button_to "Happy", dashboard_meditations_path, class: "btn btn-lg btn-default", method: "get" %>
+        <button type="button" class="btn btn-lg btn-primary">Normal</button>
         <button type="button" class="btn btn-lg btn-success">Angry</button>
       </p>
 
