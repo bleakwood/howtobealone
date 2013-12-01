@@ -13,6 +13,10 @@
  */
 
 @import "twitter/bootstrap";
+body{
+	background-color: #a8391b;
+
+}
 .span5{
 	background-color: black;
 }
@@ -25,23 +29,33 @@
 }
 #emotion_button{
 	margin: 0 auto;
-	margin-top: 220px;
+	margin-top: 230px;
 	margin-left: 50px;
 }
 .btn-primary{
 	background-color:transparent;
 	z-index:-999;
 	font-size: 12px;
+	border: none;
 }
  .btn-default{
 	background-color:transparent;
 		font-size: 12px;
+			border: none;
+			color: white;
+
 
 }
  .btn-success{
 	background-color:transparent;
 		font-size: 12px;
-
+			border: none;
+}
+#normal{
+	margin-left: 10px;
+}
+#sad{
+	margin-left: 15px;
 }
 #second_button{
 	margin-top: 70px;
@@ -50,5 +64,5 @@
 	margin-top: 50px;
 }
 #first_button{
-	margin-top: 50px;
+	margin-top: 60px;
 }
