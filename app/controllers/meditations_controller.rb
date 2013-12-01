@@ -11,7 +11,7 @@ class MeditationsController < ApplicationController
 
 	def index
 	    respond_to do |format|
-	      format.html
+	      format.html { render json: Meditation.all }
 	      format.json { render json: Meditation.all }
 	    end
 	end
@@ -19,7 +19,7 @@ class MeditationsController < ApplicationController
     private
 
 	def meditation_params
-      params.require(:meditation).permit(:duration)
+      params.require(:meditation).permit(:duration, :thoughts)
     end
 
 end
