@@ -1,8 +1,18 @@
-var htbaApp = angular.module('htbaApp', ['ngResource']).config(function($httpProvider) {
-		$httpProvider.defaults.headers.post['Content-Type'] = 'application/json';
-    }
-);
-
+var htbaApp = angular.module('htbaApp', ['ngResource', 'ngRoute']).config(['$routeProvider', function ($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: "<%= asset_path('views/meditations/index.html.erb') %>",
+        controller: 'FeelingsCtrl'
+      })
+      .when('/dashboard', {
+        templateUrl: "<%= asset_path('views/meditations/dashboard.html.erb') %>",
+        controller: 'FeelingsCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+  }]);
+ 
 htbaApp.controller('MeditationsCtrl', ['$scope', 'Meditation', function($scope, Meditation) {
 	$scope.heading = "How to Be Alone";
 	$scope.meditations = Meditation.query();
@@ -25,7 +35,7 @@ htbaApp.factory('MeditationService', function(m) {
 	});
 });
 
-htbaApp.controller('FeelingsCtrl', ['$scope', 'Feeling', function($scope, Feeling){
+htbaApp.controller('FeelingsCtrl', ['$scope', 'Feeling', '$location', function($scope, Feeling, $location){
 	$scope.create = function () {
 		Feeling.save($scope.newFeeling, function(resource) {
 	      $scope.feelings.push(resource)
@@ -51,9 +61,13 @@ htbaApp.controller('FeelingsCtrl', ['$scope', 'Feeling', function($scope, Feelin
 		$scope.newFeeling = { feeling_desc: f.name };
 		// $scope.newFeeling.feeling_desc = f.name;
 		Feeling.save($scope.newFeeling, function(resource) {
-	      console.log(resource)
+	      $location.path( '/dashboard' );
 	    }, function(response) {
 	      console.log("Error: " + response.status);
 	    });
+	};
+
+	$scope.go = function ( path ) {
+  	$location.path( path );
 	};
 }]);

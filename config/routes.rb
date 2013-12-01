@@ -12,11 +12,7 @@ HowToBeAlone::Application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-    resources :meditations do
-      collection do
-        get :dashboard
-      end
-    end
+    resources :meditations
     resources :feelings
 
   # Example resource route with options:
